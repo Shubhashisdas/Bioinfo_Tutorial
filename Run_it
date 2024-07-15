@@ -1,0 +1,3 @@
+
+
+hisat2-build ./Genome_folder/Arabidipsis.fasta ./index_folder/prefix_name
