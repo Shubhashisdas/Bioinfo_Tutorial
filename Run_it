@@ -1,3 +1,11 @@
 
 
 hisat2-build ./Genome_folder/Arabidipsis.fasta ./index_folder/prefix_name
+
+
+#then for the pair end sequence 
+# here -p is the system core/thread  
+
+
+hisat2 -x ./index_folder/prefix_name -1 forward_read_sample_1.fastq -2 reverse_read_sample_1.fastq -S /output_folder/sample_1.sam -p 8
+
