@@ -1,20 +1,8 @@
+#Overrepresented sequence removal:
+cutadapt -a CCGGGTTCTGTCTCGGACAGTCATTCCTCTAGGCATACCGTTGCCGGTAT -A CCGGGTTCTGTCTCGGACAGTCATTCCTCTAGGCATACCGTTGCCGGTAT -o ORS1_1.fastq -p ORS1_2.fastq trimmed_R1.fastq trimmed_R2.fastq
 
+cutadapt -a CTTGGTTTCGACGGGGGTTGCGAAGCAGATGCGGGCATACCGGGGTCTCA -A CTTGGTTTCGACGGGGGTTGCGAAGCAGATGCGGGCATACCGGGGTCTCA -o ORS2_1.fastq -p ORS2_2.fastq ORS1_1.fastq ORS1_2.fastq
 
-hisat2-build ./Genome_folder/Arabidipsis.fasta ./index_folder/prefix_name
-
-
-
-
-##########################  Make a folder name ankita
-###### Keep the folder index_folder, SRR10423617_1.fastq, SRR10423617_2.fastq
-###### where your index_folder contains Puccinia_triticina.ASM15152v1.1.ht2 .....and all.
-
-###### come to the ankita folder and open a terminal by right click 
-
-
-### Run this simple script
-
-hisat2 -x ./index_folder/Puccinia_triticina.ASM15152v1 -1 SRR10423617_1.fastq -2 SRR10423617_2.fastq -S sample_1.sam -p 6
 
 
 
