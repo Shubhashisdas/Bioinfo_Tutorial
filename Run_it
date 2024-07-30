@@ -1,8 +1,5 @@
-#Overrepresented sequence removal:
-cutadapt -a CCGGGTTCTGTCTCGGACAGTCATTCCTCTAGGCATACCGTTGCCGGTAT -A CCGGGTTCTGTCTCGGACAGTCATTCCTCTAGGCATACCGTTGCCGGTAT -o ORS1_1.fastq -p ORS1_2.fastq trimmed_R1.fastq trimmed_R2.fastq
-
-cutadapt -a CTTGGTTTCGACGGGGGTTGCGAAGCAGATGCGGGCATACCGGGGTCTCA -A CTTGGTTTCGACGGGGGTTGCGAAGCAGATGCGGGCATACCGGGGTCTCA -o ORS2_1.fastq -p ORS2_2.fastq ORS1_1.fastq ORS1_2.fastq
 
 
+######## Run this way   
 
-
+(base) root@SHUMAR:/mnt/e# featureCounts -p -a Puccinia_triticina.ASM15152v1.59.gtf -o output_counts.txt sorted_R0.bam sorted_S96.bam sorted_S0.bam sorted_R96.bam
