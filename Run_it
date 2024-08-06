@@ -1,5 +1,48 @@
 
 
 ######## Run this way   
+####    https://rnnh.github.io/bioinfo-notebook/docs/DE_analysis_edgeR_script.html
 
-(base) root@SHUMAR:/mnt/e# featureCounts -p -a Puccinia_triticina.ASM15152v1.59.gtf -o output_counts.txt sorted_R0.bam sorted_S96.bam sorted_S0.bam sorted_R96.bam
+# Reading in the feature count file as "counts.df"
+counts.df <- read.csv("count.csv")
+
+View(counts.df)
+
+head(counts.df)
+
+str(counts.df)
+
+#############
+
+# Reading in the feature count file as "counts.df"
+counts.df <- read.csv("count.csv")
+
+View(counts.df)
+
+
+
+# Reading in the design table as "design.df"
+design.df <- read.csv("design_table.csv")
+
+View(design.df)
+
+
+#################################################
+
+# Subsetting gene counts according to experimental condition
+counts_standard.df  <- counts.df[,c("sorted_R0.bam", "sorted_S0.bam")]
+View(counts_standard.df)
+
+counts_anaerobic.df <- counts.df[,c("sorted_R0.bam", "sorted_R96.bam")]
+View(counts_standard.df)
+
+run	name	condition
+sorted_R0.bam	Resistant	untreated
+sorted_S96.bam	susceptible	treated
+sorted_S0.bam	susceptible	untreated
+sorted_R96.bam	Resistant	treated
+
+##### standard= untreated
+##### anaerobic = Resistant
+
+
